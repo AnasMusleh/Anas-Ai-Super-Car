@@ -6,7 +6,7 @@
   <title>Anas AI Super Car</title>
   <meta name="description" content="فيديو أنس AI سوبر كار" />
   <meta property="og:title" content="Anas AI Super Car" />
-  <meta property="og:description" content="مشاهدة مباشرة بجودة عالية" />
+  <meta property="og:description" content="Watch now" />
   <meta property="og:type" content="video.other" />
   <meta name="color-scheme" content="light dark" />
   <style>
@@ -22,12 +22,30 @@
       font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial;
     }
     .wrap{ width:min(950px,96vw); padding:24px; }
+
+    /* رأس بصفين: الأول الاسم بالمنتصف بعرض كامل، الثاني العنوان يسار */
+    .topbar{
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-auto-rows:min-content;
+      gap:10px 16px;
+      margin-bottom:14px;
+      direction:ltr; /* لأن المحتوى إنجليزي */
+    }
+    .center{ grid-column: 1 / -1; text-align:center; }
+    .left{ grid-column: 1; text-align:left; }
+
+    .name{
+      margin:0; font-weight:900; color:#fff;
+      font-size:clamp(1.8rem, 4vw, 2.6rem);
+      letter-spacing:.3px; line-height:1.1;
+    }
     .title{
-      margin:0 0 14px; font-weight:800;
-      font-size:clamp(1.2rem, 3vw, 1.8rem);
+      margin:0; font-weight:800;
+      font-size:clamp(1rem, 2.2vw, 1.4rem);
       letter-spacing:.2px;
     }
-    .tagline{ margin:0 0 16px; opacity:.85; font-size:clamp(.95rem,2vw,1rem); }
+
     .card{
       background: rgba(255,255,255,.04);
       border:1px solid rgba(255,255,255,.08);
@@ -42,33 +60,40 @@
       background:#1f6feb; color:white; text-decoration:none; font-weight:600;
     }
     .btn.ghost{ background:transparent; color:#e7edf3; border:1px solid rgba(255,255,255,.25); }
-    .hint{ text-align:center; opacity:.8; font-size:.95rem; margin-top:10px; }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <h1 class="title">Anas AI Super Car</h1>
-    <p class="tagline">مشاهدة مباشرة بجودة عالية على المتصفح (موبايل وكمبيوتر)</p>
+
+    <header class="topbar">
+      <!-- الصف الأول: الاسم بالمنتصف -->
+      <div class="center">
+        <div class="name">Anas Musleh</div>
+      </div>
+      <!-- الصف الثاني: العنوان يسار -->
+      <div class="left">
+        <h1 class="title">Anas AI Super Car</h1>
+      </div>
+    </header>
 
     <div class="card">
-      <!-- إذا ملفك داخل مجلد (assets) غيّر السطر التالي إلى src="assets/Anas-Ai-Super-Car.mp4" -->
+      <!-- عدّل المسار لو الفيديو داخل assets -->
       <video
         src="Anas-Ai-Super-Car.mp4"
         controls
         playsinline
         preload="metadata"
         poster="poster.jpg">
-        متصفحك لا يدعم الفيديو. حمل الملف من هنا:
-        <a href="Anas-Ai-Super-Car.mp4">تحميل الفيديو</a>
+        Your browser doesn’t support HTML5 video. Download it here:
+        <a href="Anas-Ai-Super-Car.mp4">Download Video</a>
       </video>
 
       <div class="row">
-        <a class="btn" href="Anas-Ai-Super-Car.mp4" download>تحميل الفيديو</a>
-        <a class="btn ghost" href="./">إعادة التحميل</a>
+        <a class="btn" href="Anas-Ai-Super-Car.mp4" download>Download Video</a>
+        <a class="btn ghost" href="./">Reload</a>
       </div>
-
-      <div class="hint">(إذا بدك يبدأ لوحده، أضف داخل وسم الفيديو: muted autoplay)</div>
     </div>
+
   </div>
 </body>
 </html>
