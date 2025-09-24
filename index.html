@@ -1,6 +1,46 @@
 <!doctype html>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>OK</title>
-<h1 style="font-family:system-ui">It works ✅</h1>
-<p><a href="Anas-Ai-Super-Car.mp4">افتح الفيديو</a></p>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anas AI Super Car</title>
+  <meta name="description" content="شاهد فيديو Anas AI Super Car الآن" />
+  <meta property="og:title" content="Anas AI Super Car" />
+  <meta property="og:description" content="فيديو قصير من إنتاج بلال" />
+  <meta property="og:type" content="video.other" />
+  <meta name="color-scheme" content="light dark" />
+  <style>
+    :root{color-scheme:light dark}
+    body{
+      margin:0;min-height:100vh;display:grid;place-items:center;
+      background:#0b0f14;color:#e7edf3;
+      font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial;
+    }
+    .wrap{width:min(900px,95vw);padding:12px}
+    h1{margin:0 0 10px;font-size:clamp(1.2rem,2.5vw,1.6rem)}
+    video{width:100%;height:auto;border-radius:14px;display:block;outline:0}
+    .hint{opacity:.85;text-align:center;margin-top:.6rem}
+    a{color:inherit;text-decoration:underline}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Anas AI Super Car</h1>
+
+    <!-- لو الفيديو جنب index.html وبنفس الاسم -->
+    <video
+      src="Anas-Ai-Super-Car.mp4"
+      controls
+      playsinline
+      preload="metadata">
+      متصفحك لا يدعم تشغيل الفيديو. حمله من هنا:
+      <a href="Anas-Ai-Super-Car.mp4">تحميل الفيديو</a>
+    </video>
+
+    <div class="hint">
+      إذا بدك يبدأ لحاله، أضف (muted autoplay) داخل وسم الفيديو
+      (بعض الأجهزة تمنع التشغيل التلقائي مع الصوت).
+    </div>
+  </div>
+</body>
+</html>
